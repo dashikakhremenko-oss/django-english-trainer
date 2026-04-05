@@ -1,0 +1,8 @@
+[MASTER]
+good-names=i,j,k,ex,Run,_,pk,id,request,args,kwargs
+
+[MESSAGES CONTROL]
+disable=missing-docstring,too-few-public-methods,no-member,invalid-name
+
+[FORMAT]
+max-line-length=120

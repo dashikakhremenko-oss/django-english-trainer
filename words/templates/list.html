@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<p><strong>Всего слов: {{ total }}</strong></p>
+<h1>Мои слова</h1>
+<table border="1" cellpadding="10">
+    <tr><th>Слово</th><th>Перевод</th><th>Действия</th></tr>
+    {% for word in words %}
+    <tr>
+        <td>{{ word.word }}</td>
+        <td>{{ word.translation }}</td>
+        <td><a href="/edit/{{ word.id }}/">Редактировать</a></td>
+    </tr>
+    {% empty %}
+    <tr><td colspan="3">Слов пока нет. <a href="/add/">Добавь первое!</a></td></tr>
+    {% endfor %}
+</table>
+{% endblock %}
